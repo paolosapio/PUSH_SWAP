@@ -45,5 +45,6 @@ bool	reverse_rotate_list(t_list **lst);
 int 	push_swap(t_stack *stack);
 int 	checker(t_stack *stack);
 t_stack	*buble_sort(t_stack *stack);
-bool is_order(t_list *stack);
+bool	is_order(t_list *stack);
+void	sorter_nodes(t_stack *stack);
 #endif

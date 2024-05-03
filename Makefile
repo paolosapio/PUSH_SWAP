@@ -29,7 +29,8 @@ SRCS	= \
 		checker.c\
 		GNL/get_next_line.c\
 		GNL/get_next_line_utils.c\
-		buble_sort.c
+		buble_sort.c\
+		sorter_nodes.c
 
 OBJS	=	$(SRCS:.c=.o)
 

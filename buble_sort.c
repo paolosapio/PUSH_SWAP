@@ -6,7 +6,7 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 17:03:27 by psapio            #+#    #+#             */
-/*   Updated: 2024/05/02 20:42:56 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/03 18:02:41 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,23 +28,14 @@ t_stack *buble_sort(t_stack *stack)
 
 	if (is_order(stack->a) == true)
 	{
-		printf("Ordeñada\n");
+		printf("LISTA ordeñada\n");
 		print_list(stack->a);
+		return (stack);
 	}
-	else 
-	{
-		printf("NOOOO ordeñado\n");
-		print_list(stack->a);
+	while(!is_order(stack->a))
+	{ 
+		sorter_nodes(stack);
+		printf("esta ordeñada?:%d\n", is_order(stack->a));
 	}
-	/*
-	while(is_order(stack->a))
-	{
-		printf("entrada a la funcion\n");
-		if(stack->a->content > stack->a->next->content)
-			ra(stack);
-		else
-			sa(stack);
-	}*/
 	return stack;
 }
-
