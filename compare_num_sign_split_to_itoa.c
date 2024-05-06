@@ -6,7 +6,7 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 13:26:48 by psapio            #+#    #+#             */
-/*   Updated: 2024/05/05 12:36:21 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/06 15:44:27 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ bool compare_num_sign_split_to_itoa(char *result_split)
 	result_str = ft_itoa(result_n);
 	if (result_split[0] == '+')
 		result_split++;
+	if (result_split[0] == '\0')
+		return (false);
 	while (*result_split == '0')
 		result_split++;
 	if (ft_strncmp(result_split, result_str, ft_strlen(result_split)) == 0)
