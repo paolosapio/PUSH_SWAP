@@ -6,15 +6,12 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 15:31:41 by psapio            #+#    #+#             */
-/*   Updated: 2024/05/02 19:27:39 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/06 12:08:48 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//hacer que coja el 000002 y el +7 mira (compare_num_sign_split_to_itoa)
-
 #include "push_swap.h"
 #include "libft/libft.h"
-#include <stdbool.h>
 
 char *ft_strjoin_free(char *str1, char *str2)
 {
@@ -93,7 +90,6 @@ t_list *convert_to_list(char **result_split)
 		else
 		{
 			printf("Error: Duplicate numbers\n");
-			//queda liberar la lista
 			exit(0);
 		}
 		++i;
@@ -152,15 +148,22 @@ int main(int argc, char **argv)
 	ret = 0;
 	stack = initialize_stack();
 	if (argc < 2)
+	{
+		write(2, "Error", 5);
 		return (1);
+	}
 	result_join = join_table(argv + 1);
 	if (result_join == NULL)
+	{
+		write(2, "Error", 5);
 		return (1);
+	}
 	result_split = ft_split(result_join, ' ');
 	free(result_join);
 	if (!check_numbers_table(result_split))
 	{
 		free_table(result_split);
+		write(2, "Error", 5);
 		return (1);
 	}
 	stack.a = convert_to_list(result_split);
