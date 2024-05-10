@@ -40,7 +40,7 @@ CC	=	gcc
 
 RM	=	rm -f
 
-SANITIZE = 	-fsanitize=address -g
+SANITIZE = 	-fsanitize=address -fsanitize=leak -g3
 CFLAGS	=	-Wall -Wextra -Werror $(SANITIZE)
 
 all		:	$(NAME)

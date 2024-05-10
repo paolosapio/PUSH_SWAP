@@ -169,9 +169,9 @@ int main(int argc, char **argv)
 	}
 	stack.a = convert_to_list(result_split);
 	free_table(result_split);
-	if (!ft_strncmp(argv[0], "./checker", 10))
-		ret = checker(&stack);
-	else if (!ft_strncmp(argv[0], "./push_swap", 12))
+	//if (!ft_strncmp(argv[0], "./checker", 10))
+	//	ret = checker(&stack);
+	//else if (!ft_strncmp(argv[0], "./push_swap", 12))
 		ret = push_swap(&stack);
 //	printf("\n\n\nSTICKER VALUE:%d\n\n\n", stack.a->sticker);
 	free_stack(&stack);
