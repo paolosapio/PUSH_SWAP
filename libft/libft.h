@@ -6,7 +6,7 @@
 /*   By: psapio <psapio@student.42madrid.c>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:35:09 by psapio            #+#    #+#             */
-/*   Updated: 2024/05/06 16:57:13 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/08 19:33:46 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -26,6 +26,7 @@ typedef struct s_list
 {
 	void	*content;
 	struct	s_list *next;
+	int	sticker;
 } t_list;
 
 /* LIBFT */

@@ -47,4 +47,7 @@ int 	checker(t_stack *stack);
 t_stack	*buble_sort(t_stack *stack);
 bool	is_order(t_list *stack);
 void	sorter_nodes(t_stack *stack);
+void	stickereitor(t_list *stack_a);
+t_stack	*radix_sort(t_stack *stack);
+
 #endif

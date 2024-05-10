@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   stickereitor.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/05 12:21:53 by psapio            #+#    #+#             */
-/*   Updated: 2024/05/10 18:27:58 by psapio           ###   ########.fr       */
+/*   Created: 2024/05/03 16:55:46 by psapio            #+#    #+#             */
+/*   Updated: 2024/05/08 21:31:01 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdbool.h>
 
-int push_swap(t_stack *stack)
+void	stickereitor(t_list *stack_a)
 {
-	(void)stack;
-	
-	stack->must_print = true;
-//	printf("ANTES\n");
-//	print_list(stack->a);
-	stickereitor(stack->a);
-	radix_sort(stack);
-//	buble_sort(stack);
-//	printf("DESPUES\n");
-//	print_list(stack->a);
-//	printf("\n :D hello from Push_Swap :D\n");
-	return (0);
+	int i;
+	int list_size;
+	t_list *low_node;
+	t_list *temp_list;
+
+	list_size = ft_lstsize(stack_a);
+	i = 0;
+	while(list_size != i)
+	{
+		temp_list = stack_a;
+		low_node = stack_a;
+		while(temp_list != NULL)
+		{
+			if ((*(int*)(low_node->content) > *(int*)(temp_list->content))
+				low_node = temp_list;
+			temp_list = temp_list->next;
+		}
+		low_node->sticker = i;
+		i++;
+	}
 }

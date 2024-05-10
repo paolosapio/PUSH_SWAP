@@ -6,7 +6,7 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 15:31:41 by psapio            #+#    #+#             */
-/*   Updated: 2024/05/06 12:08:48 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/10 18:24:51 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ t_list *convert_to_list(char **result_split)
 	while (result_split[i] != NULL)
 	{
 		node = ft_lstnew_int(ft_atoi(result_split[i]));
+		node->sticker = -1;
 		if((compare_new_num_node(list, node)) == true)
 			ft_lstadd_back(&list, node);
 		else
@@ -172,6 +173,7 @@ int main(int argc, char **argv)
 		ret = checker(&stack);
 	else if (!ft_strncmp(argv[0], "./push_swap", 12))
 		ret = push_swap(&stack);
+//	printf("\n\n\nSTICKER VALUE:%d\n\n\n", stack.a->sticker);
 	free_stack(&stack);
 	return (ret);
 }
