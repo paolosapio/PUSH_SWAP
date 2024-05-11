@@ -6,14 +6,14 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 15:31:41 by psapio            #+#    #+#             */
-/*   Updated: 2024/05/11 20:48:14 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/11 21:08:17 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "libft/libft.h"
 
-int		ft_error(void)
+int	ft_error(void)
 {
 	write(2, "Error", 5);
 	exit(1);
@@ -51,23 +51,23 @@ char	*join_table(char **table)
 	return (result);
 }
 
-bool check_numbers_table(char **table)
+bool	check_numbers_table(char **table)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (table[i] != NULL)
 	{
-		if(!compare_num_sign_split_to_itoa(table[i]))
-           		return (false);
+		if (!compare_num_sign_split_to_itoa(table[i]))
+			return (false);
 		++i;
 	}
 	return (true);
 }
 
-t_list *ft_lstnew_int(int nb)
+t_list	*ft_lstnew_int(int nb)
 {
-	int *int_ptr;
+	int	*int_ptr;
 
 	int_ptr = malloc(sizeof(int));
 	*int_ptr = nb;
@@ -76,11 +76,11 @@ t_list *ft_lstnew_int(int nb)
 	return (ft_lstnew(int_ptr));
 }
 
-t_list *convert_to_list(char **result_split)
+t_list	*convert_to_list(char **result_split)
 {
-	int i;
-	t_list *list;
-	t_list *node;
+	int		i;
+	t_list	*list;
+	t_list	*node;
 
 	i = 0;
 	list = NULL;
@@ -88,7 +88,7 @@ t_list *convert_to_list(char **result_split)
 	{
 		node = ft_lstnew_int(ft_atoi(result_split[i]));
 		node->sticker = -1;
-		if((compare_new_num_node(list, node)) == true)
+		if ((compare_new_num_node(list, node)) == true)
 			ft_lstadd_back(&list, node);
 		else
 			ft_error();
@@ -97,21 +97,21 @@ t_list *convert_to_list(char **result_split)
 	return (list);
 }
 
-t_stack initialize_stack(void)
+t_stack	initialize_stack(void)
 {
-	t_stack stack;
+	t_stack	stack;
 
 	stack.a = NULL;
 	stack.b = NULL;
-	return stack;
+	return (stack);
 }
 
-void free_table(char **table)
+void	free_table(char **table)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while(table[i])
+	while (table[i])
 	{
 		free(table[i]);
 		++i;
@@ -119,9 +119,9 @@ void free_table(char **table)
 	free(table);
 }
 
-void ft_lstclear(t_list *list, void (*f)(void *ptr))
+void	ft_lstclear(t_list *list, void (*f)(void *ptr))
 {
-	t_list *node_to_free;
+	t_list	*node_to_free;
 
 	while (list)
 	{
@@ -132,18 +132,18 @@ void ft_lstclear(t_list *list, void (*f)(void *ptr))
 	}
 }
 
-void free_stack(t_stack *stack)
+void	free_stack(t_stack *stack)
 {
 	ft_lstclear(stack->a, free);
 	ft_lstclear(stack->b, free);
 }
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	char 	*result_join;
-	char 	**result_split;
-	t_stack stack;
-	int 	ret;
+	char	*result_join;
+	char	**result_split;
+	t_stack	stack;
+	int		ret;
 
 	ret = 0;
 	stack = initialize_stack();
@@ -161,7 +161,7 @@ int main(int argc, char **argv)
 	}
 	stack.a = convert_to_list(result_split);
 	free_table(result_split);
-		ret = push_swap(&stack);
+	ret = push_swap(&stack);
 	free_stack(&stack);
 	return (ret);
 }
