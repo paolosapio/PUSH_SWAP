@@ -6,15 +6,15 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 18:37:58 by psapio            #+#    #+#             */
-/*   Updated: 2024/04/26 18:37:59 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/11 19:59:10 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-bool pb(t_stack *stack)
+bool	pb(t_stack *stack)
 {
-	if (stack->must_print)	
+	if (stack->must_print)
 		write(1, "pb\n", 3);
 	return (node_move(&stack->b, &stack->a));
 }

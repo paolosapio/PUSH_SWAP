@@ -6,13 +6,13 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 18:36:22 by psapio            #+#    #+#             */
-/*   Updated: 2024/04/26 18:38:01 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/11 19:58:13 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-bool pa(t_stack *stack)
+bool	pa(t_stack *stack)
 {
 	if (stack->must_print)
 		write(1, "pa\n", 3);

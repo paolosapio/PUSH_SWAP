@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   checker.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/11 18:49:55 by psapio            #+#    #+#             */
+/*   Updated: 2024/05/11 18:52:07 by psapio           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 #include "GNL/get_next_line.h"
 
 static t_cmd *get_command(int index)
 {
-	static t_cmd commands[] = {
+	static	t_cmd commands[] = {
 		{"rr\n",  "Rotate stack a/b", &rr},
 		{"rra\n", "Reverse rotate stack a", &rra},
 		{"rrb\n", "Reverse rotate stack b", &rrb},
