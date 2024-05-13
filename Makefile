@@ -32,7 +32,8 @@ SRCS	= \
 		buble_sort.c\
 		sorter_nodes.c\
 		stickereitor.c\
-		radix_sort.c
+		radix_sort.c\
+		three_cases.c
 
 OBJS	=	$(SRCS:.c=.o)
 

@@ -6,13 +6,13 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 18:29:23 by psapio            #+#    #+#             */
-/*   Updated: 2024/04/26 18:35:45 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/13 15:41:16 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-bool sb(t_stack *stack)
+bool	sb(t_stack *stack)
 {
 	if (stack->must_print)
 		write(1, "sb\n", 3);

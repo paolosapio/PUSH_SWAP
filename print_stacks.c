@@ -1,15 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print_stacks.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/13 15:28:07 by psapio            #+#    #+#             */
+/*   Updated: 2024/05/13 15:29:51 by psapio           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-bool print_stacks(t_stack *stack)
+bool	print_stacks(t_stack *stack)
 {
-	t_list *stack_a;
-	t_list *stack_b;
-	ssize_t diff;
+	t_list	*stack_a;
+	t_list	*stack_b;
+	ssize_t	diff;
 
-	diff = ft_lstsize(stack->a) -ft_lstsize(stack->b);
+	diff = ft_lstsize(stack->a) - ft_lstsize(stack->b);
 	stack_a = stack->a;
 	stack_b = stack->b;
-
 	while (stack_a || stack_b)
 	{
 		printf("\t");
@@ -31,5 +42,5 @@ bool print_stacks(t_stack *stack)
 			++diff;
 	}
 	printf("\t --a--\t --b--\n");
-	return true;
+	return (true);
 }

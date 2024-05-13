@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rra.c                                              :+:      :+:    :+:   */
+/*   three_cases.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/26 17:51:08 by psapio            #+#    #+#             */
-/*   Updated: 2024/05/13 15:39:06 by psapio           ###   ########.fr       */
+/*   Created: 2024/05/13 16:37:38 by psapio            #+#    #+#             */
+/*   Updated: 2024/05/13 17:24:57 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "push_swap.h"
 
-bool	rra(t_stack *stack)
+void	three_cases(t_stack *stack)
 {
-	if (stack->must_print)
-		write(1, "sa\n", 3);
-	return (reverse_rotate_list(&stack->a));
+	if (stack->a->sticker > stack->a->next->sticker)
+		{
+			if (stack->a->next->sticker > stack->a->next->next->sticker)
+			{
+				ra(stack);
+				sa(stack);
+			}
+			else
+				ra(stack);
+		}
+	return ;
 }

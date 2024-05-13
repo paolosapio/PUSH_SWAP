@@ -6,15 +6,15 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 18:42:21 by psapio            #+#    #+#             */
-/*   Updated: 2024/04/26 18:42:47 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/13 15:39:40 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-bool rrb(t_stack *stack)
+bool	rrb(t_stack *stack)
 {
 	if (stack->must_print)
 		write(1, "rrb\n", 4);
-	return(reverse_rotate_list(&stack->b));
+	return (reverse_rotate_list(&stack->b));
 }

@@ -6,19 +6,19 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 16:12:04 by psapio            #+#    #+#             */
-/*   Updated: 2024/05/10 17:59:46 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/13 17:19:25 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
 
-t_stack *radix_sort(t_stack *stack)
+void	radix_sort(t_stack *stack)
 {
 	int bit_count;
 	int node_amount;
 	int bit_column;
 
 	if (is_order(stack->a) == true)
-			return (stack);
+			return ;
 	bit_count = 0;
 	bit_column = 1;
 	while (bit_count < 32 && is_order(stack->a) == false)
@@ -37,5 +37,5 @@ t_stack *radix_sort(t_stack *stack)
 		bit_count++;
 		bit_column = bit_column * 2;
 	}
-	return (stack);
+	return ;
 }
