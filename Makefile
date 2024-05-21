@@ -33,7 +33,8 @@ SRCS	= \
 		sorter_nodes.c\
 		stickereitor.c\
 		radix_sort.c\
-		three_cases.c
+		three_cases.c\
+		sort_four_five_case.c
 
 OBJS	=	$(SRCS:.c=.o)
 

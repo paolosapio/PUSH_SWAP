@@ -1,37 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stickereitor.c                                     :+:      :+:    :+:   */
+/*   sort_four_five_case.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/03 16:55:46 by psapio            #+#    #+#             */
-/*   Updated: 2024/05/08 21:31:01 by psapio           ###   ########.fr       */
+/*   Created: 2024/05/20 11:32:22 by psapio            #+#    #+#             */
+/*   Updated: 2024/05/20 14:07:06 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "push_swap.h"
 
-void	stickereitor(t_list *stack_a)
+void sort_four_five_case(t_stack *stack)
 {
-	int i;
-	int list_size;
-	t_list *low_node;
-	t_list *temp_list;
+	pb(stack);
+	pb(stack);
+	three_cases(stack);
 
-	list_size = ft_lstsize(stack_a);
-	i = 0;
-	while(list_size != i)
-	{
-		temp_list = stack_a;
-		low_node = stack_a;
-		while(temp_list != NULL)
-		{
-			if ((*(int*)(low_node->content) > *(int*)(temp_list->content))
-				low_node = temp_list;
-			temp_list = temp_list->next;
-		}
-		low_node->sticker = i;
-		i++;
-	}
 }

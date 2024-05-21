@@ -50,5 +50,6 @@ void	sorter_nodes(t_stack *stack);
 void	stickereitor(t_list *stack_a);
 void	radix_sort(t_stack *stack);
 void	three_cases(t_stack *stack);
+void	sort_four_five_case(t_stack *stack);
 
 #endif

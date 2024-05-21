@@ -6,7 +6,7 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 16:12:04 by psapio            #+#    #+#             */
-/*   Updated: 2024/05/13 17:19:25 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/21 11:44:34 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -17,8 +17,6 @@ void	radix_sort(t_stack *stack)
 	int node_amount;
 	int bit_column;
 
-	if (is_order(stack->a) == true)
-			return ;
 	bit_count = 0;
 	bit_column = 1;
 	while (bit_count < 32 && is_order(stack->a) == false)
@@ -35,7 +33,7 @@ void	radix_sort(t_stack *stack)
 		while (stack->b != NULL)
 			pa(stack);
 		bit_count++;
-		bit_column = bit_column * 2;
+		bit_column = bit_column << 1;
 	}
 	return ;
 }

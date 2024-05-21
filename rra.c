@@ -6,7 +6,7 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 17:51:08 by psapio            #+#    #+#             */
-/*   Updated: 2024/05/13 15:39:06 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/21 14:16:18 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 bool	rra(t_stack *stack)
 {
 	if (stack->must_print)
-		write(1, "sa\n", 3);
+		write(1, "rra\n", 4);
 	return (reverse_rotate_list(&stack->a));
 }
