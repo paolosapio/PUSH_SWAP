@@ -6,16 +6,16 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 13:26:48 by psapio            #+#    #+#             */
-/*   Updated: 2024/05/06 15:44:27 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/23 13:42:17 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-bool compare_num_sign_split_to_itoa(char *result_split)
+bool	compare_num_sign_split_to_itoa(char *result_split)
 {
-	int result_n;
-	char *result_str;
+	int		result_n;
+	char	*result_str;
 
 	result_n = ft_atoi(result_split);
 	result_str = ft_itoa(result_n);

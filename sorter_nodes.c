@@ -6,7 +6,7 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 16:55:46 by psapio            #+#    #+#             */
-/*   Updated: 2024/05/03 18:04:20 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/23 13:41:17 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	sorter_nodes(t_stack *stack)
 {
-	int long_list;
+	int	long_list;
 
 	long_list = ft_lstsize(stack->a);
-	while(long_list - 1)
+	while (long_list - 1)
 	{
-		if (*(int*)(stack->a->content) > *(int*)(stack->a->next->content))
+		if (*(int *)(stack->a->content) > *(int *)(stack->a->next->content))
 		{
 			sa(stack);
 			ra(stack);
@@ -33,4 +33,3 @@ void	sorter_nodes(t_stack *stack)
 	}
 	ra(stack);
 }
-

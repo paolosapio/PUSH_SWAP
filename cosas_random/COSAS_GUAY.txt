@@ -1,3 +1,0 @@
- desde terminal:
-
-	grep -rn "texto_a_buscar" .  --> entra en todos los archivos del directorio actual y busca "texto_a_buscar". Si este texto existe, te lo muestra por stdout.

@@ -6,20 +6,22 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 14:58:39 by psapio            #+#    #+#             */
-/*   Updated: 2024/04/10 20:31:52 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/23 14:08:00 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-t_list *ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
-	t_list *new_node;
- 	new_node = malloc(sizeof(t_list));
-	if (new_node== NULL)
+	t_list	*new_node;
+
+	new_node = malloc(sizeof(t_list));
+	if (new_node == NULL)
 		return (NULL);
 	new_node->content = content;
 	new_node->next = NULL;
-	return(new_node);
+	return (new_node);
 }
 /*
 #include <stdio.h>
@@ -27,7 +29,8 @@ t_list *ft_lstnew(void *content)
 char *proc(t_list **head)
 {
 	// str se declara en stack
-	char str[13] = "Hola que tal";  // <--- este texto se almacenará si o si en global
+	char str[13] = "Hola que tal";  // <---
+este texto se almacenará si o si en global
 
 	*head = ft_lstnew(str);
 	printf("%s\n", (*head)->content);
@@ -44,21 +47,6 @@ int main()
 	return (0);
 }
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 int main(void)
 {
@@ -67,5 +55,3 @@ int main(void)
 	printf("valor in lista nuw: %c\n", ((char*)(ft_lstnew(cosas)->content))[0]);
 }
 */
-
-

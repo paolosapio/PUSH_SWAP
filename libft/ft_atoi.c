@@ -6,17 +6,18 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 15:45:44 by psapio            #+#    #+#             */
-/*   Updated: 2024/04/22 12:30:22 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/23 14:01:11 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-//#include "libft.h"
+
+#include "libft.h"
 #include <stdio.h>
 
-int		ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	int	i;
 	int	sign;
-	int conversion;
+	int	conversion;
 
 	i = 0;
 	sign = 1;

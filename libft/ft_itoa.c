@@ -6,7 +6,7 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 11:06:14 by psapio            #+#    #+#             */
-/*   Updated: 2024/05/02 12:41:22 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/23 14:01:58 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -14,7 +14,7 @@
 char	*ft_itoa(int n)
 {
 	char		*array;
-	int		counter;
+	int			counter;
 	long int	n_twin;
 
 	n_twin = (long int)n;

@@ -17,16 +17,11 @@ SRCS	= \
 		ra.c\
 		rb.c\
 		rr.c\
-		la.c\
-		lb.c\
 		rra.c\
 		rrb.c\
 		rrr.c\
 		rotate_list.c\
 		reverse_rotate_list.c\
-		print_list.c\
-		print_stacks.c\
-		checker.c\
 		GNL/get_next_line.c\
 		GNL/get_next_line_utils.c\
 		buble_sort.c\
@@ -34,7 +29,10 @@ SRCS	= \
 		stickereitor.c\
 		radix_sort.c\
 		three_cases.c\
-		sort_four_five_case.c
+		sort_four_five_case.c\
+		is_order.c\
+		utils_list.c\
+		utils_pars.c
 
 OBJS	=	$(SRCS:.c=.o)
 

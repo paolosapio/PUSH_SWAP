@@ -6,17 +6,17 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 12:21:53 by psapio            #+#    #+#             */
-/*   Updated: 2024/05/22 21:13:24 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/23 14:35:55 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdbool.h>
 
-int push_swap(t_stack *stack)
+int	push_swap(t_stack *stack)
 {
 	if (is_order(stack->a) == true)
-		return 0;
+		return (0);
 	stack->must_print = true;
 	stickereitor(stack->a);
 	if (ft_lstsize(stack->a) > 5)
@@ -27,6 +27,8 @@ int push_swap(t_stack *stack)
 		three_cases(stack);
 	else
 		sort_four_five_case(stack);
-	print_list(stack->a);
 	return (0);
 }
+/*	to print list (stickers) use:
+	print_list(stack->a);
+*/

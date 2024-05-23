@@ -37,7 +37,6 @@ SRCS	= \
 		ft_toupper.c\
 		ft_lstnew.c\
 		ft_lstadd_front.c\
-		ft_lstlast.c\
 		ft_lstsize.c\
 		ft_lstadd_back.c\
 		ft_lstpop_front.c\

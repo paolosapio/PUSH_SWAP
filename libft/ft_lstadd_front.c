@@ -6,13 +6,14 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 14:52:22 by psapio            #+#    #+#             */
-/*   Updated: 2024/04/22 13:42:45 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/23 14:10:42 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include"libft.h"
-void ft_lstadd_front(t_list **lst, t_list *new)
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if(new == NULL || lst == NULL) 
+	if (new == NULL || lst == NULL)
 		return ;
 	new->next = *lst;
 	*lst = new;
@@ -32,7 +33,7 @@ int main(void)
 
 	ft_lstadd_front(&lista, nodo);
 	printf("valor en primer nodo (lista): %s\n", lista->content);//javi
-	printf("valor en segundo nodo (lista): %s\n", (lista->next)->content);//paolo
+	printf("valor en segundo nodo (lista): %s\n", (lista->next)->content);
 }
 */
 /*
@@ -48,7 +49,8 @@ int main(void)
 	nodo1 = ft_lstnew(&numeros[0]); //aqui ponenos el 8
 	nodo2 = ft_lstnew(&numeros[1]); //aqui ponemos el 6
 	nodo3 = ft_lstnew(&numeros[2]); //aqui ponemos el 4
-	nodo1->next = nodo2; //nodo1->content tenemos 8 y (esto entre parentesis es nodo2)(nodo1->next)->content 6
+	nodo1->next = nodo2; //nodo1->content tenemos 8 y 
+(esto entre parentesis es nodo2)(nodo1->next)->content 6
 	ft_lstadd_front(&nodo1, nodo3);
 
 	iter = nodo1;
@@ -59,5 +61,4 @@ int main(void)
 		iter = iter->next;
 	}
 }
-
 */

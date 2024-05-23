@@ -6,17 +6,17 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 11:32:22 by psapio            #+#    #+#             */
-/*   Updated: 2024/05/22 22:03:36 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/23 12:46:34 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
 
-void sort_four_five_case(t_stack *stack)
+void	sort_four_five_case(t_stack *stack)
 {
-	int		hi_sticker;
+	int	hi_sticker;
 
 	hi_sticker = ft_lstsize(stack->a) - 1;
-	while(ft_lstsize(stack->a) != 3)
+	while (ft_lstsize(stack->a) != 3)
 	{	
 		if ((stack->a->sticker == 0) || (stack->a->sticker == hi_sticker))
 			pb(stack);

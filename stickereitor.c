@@ -6,21 +6,20 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 16:55:46 by psapio            #+#    #+#             */
-/*   Updated: 2024/05/22 21:59:09 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/23 12:57:40 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void reset_stickers(t_list *stack_a)
+void	reset_stickers(t_list *stack_a)
 {
-	while(stack_a != NULL)
+	while (stack_a != NULL)
 	{
 		stack_a->sticker = -1;
 		stack_a = stack_a->next;
 	}
 }
-
 
 void	stickereitor(t_list *stack_a)
 {

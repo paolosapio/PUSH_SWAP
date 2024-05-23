@@ -6,7 +6,7 @@
 /*   By: psapio <psapio@student.42madrid.c>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:35:09 by psapio            #+#    #+#             */
-/*   Updated: 2024/05/22 21:46:03 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/23 13:55:17 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -17,17 +17,17 @@
 # include <string.h>
 # include <stdlib.h>
 # include <limits.h>
-#include <stdint.h>
-#include <stdbool.h>
+# include <stdint.h>
+# include <stdbool.h>
 
 /* STRUCT */
 
 typedef struct s_list
 {
-	void	*content;
-	struct	s_list *next;
-	int		sticker;
-} t_list;
+	void			*content;
+	struct s_list	*next;
+	int				sticker;
+}	t_list;
 
 /* LIBFT */
 
@@ -73,7 +73,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
-t_list 	*ft_lstpop_front(t_list **lst);
-t_list 	*ft_lstpop_back(t_list **lst);
+t_list	*ft_lstpop_front(t_list **lst);
+t_list	*ft_lstpop_back(t_list **lst);
 
 #endif
