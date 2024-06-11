@@ -6,15 +6,23 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 15:31:41 by psapio            #+#    #+#             */
-/*   Updated: 2024/05/11 21:08:17 by psapio           ###   ########.fr       */
+/*   Updated: 2024/05/27 17:04:32 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "libft/libft.h"
 
-int	main(int argc, char **argv)
+void	checkeitor(int argc, char **argv)
 {
+	if (argc < 2)
+		exit(1);
+	if (argv[1][0] == ' ')
+		ft_error();
+}
+
+int	main(int argc, char **argv)
+{	
 	char	*result_join;
 	char	**result_split;
 	t_stack	stack;
@@ -22,8 +30,7 @@ int	main(int argc, char **argv)
 
 	ret = 0;
 	stack = initialize_stack();
-	if (argc < 2)
-		ft_error();
+	checkeitor(argc, argv);
 	result_join = join_table(argv + 1);
 	if (result_join == NULL)
 		return (0);

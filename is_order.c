@@ -14,6 +14,8 @@
 
 bool	is_order(t_list *stack)
 {
+	if (!stack)
+		return (false);
 	while (stack->next != NULL)
 	{
 		if (*(int *)(stack->content) > *(int *)(stack->next->content))

@@ -16,7 +16,7 @@ void	sort_four_five_case(t_stack *stack)
 	int	hi_sticker;
 
 	hi_sticker = ft_lstsize(stack->a) - 1;
-	while (ft_lstsize(stack->a) != 3)
+	while (ft_lstsize(stack->a) > 3)
 	{	
 		if ((stack->a->sticker == 0) || (stack->a->sticker == hi_sticker))
 			pb(stack);

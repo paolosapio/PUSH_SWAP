@@ -1,7 +1,6 @@
 NAME	=	push_swap
 BONUS 	= 	checker
 
-
 SRCS	= \
 		main.c\
 		push_swap.c\
